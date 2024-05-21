@@ -10,44 +10,50 @@
 #include <metal_stdlib>
 #include <simd/simd.h>
 
-// Including header shared between this Metal shader code and Swift/C code executing Metal API commands
-#import "ShaderTypes.h"
-
 using namespace metal;
 
-typedef struct
-{
-    float3 position [[attribute(VertexAttributePosition)]];
-    float2 texCoord [[attribute(VertexAttributeTexcoord)]];
+typedef struct {
+    float3 position [[attribute((0))]];
 } Vertex;
 
-typedef struct
+typedef struct {
+    float4 position[[position]];
+    float3 color;
+    float2 textCoords;
+} VertexOut;
+
+typedef struct {
+    float4x4 model;
+    float4x2 textCoords;
+} InstancePayload;
+
+//typedef struct {
+//    float4x4 viewProjectionMatrix;
+//} CameraConstants;
+
+typedef struct {
+    float4x4 projectionMatrix;
+    float4x4 viewMatrix;
+} CameraConstants;
+
+vertex VertexOut vertex_shader(
+    const device Vertex *vertices [[buffer(0)]],
+    unsigned int vid [[vertex_id]],
+    unsigned int iid [[instance_id]],
+    const device InstancePayload *payloads [[buffer(1)]],
+    const device CameraConstants &camera [[buffer(2)]])
 {
-    float4 position [[position]];
-    float2 texCoord;
-} ColorInOut;
-
-vertex ColorInOut vertexShader(Vertex in [[stage_in]],
-                               constant Uniforms & uniforms [[ buffer(BufferIndexUniforms) ]])
-{
-    ColorInOut out;
-
-    float4 position = float4(in.position, 1.0);
-    out.position = uniforms.projectionMatrix * uniforms.modelViewMatrix * position;
-    out.texCoord = in.texCoord;
-
+    VertexOut out;
+    Vertex in = vertices[vid];
+    InstancePayload ip = payloads[iid];
+    out.position = camera.projectionMatrix * camera.viewMatrix * ip.model * float4(in.position, 1);
+    out.textCoords = ip.textCoords[vid];
     return out;
 }
 
-fragment float4 fragmentShader(ColorInOut in [[stage_in]],
-                               constant Uniforms & uniforms [[ buffer(BufferIndexUniforms) ]],
-                               texture2d<half> colorMap     [[ texture(TextureIndexColor) ]])
+fragment float4 fragment_shader(VertexOut in [[stage_in]], texture2d<float> colorTexture [[texture(0)]])
 {
-    constexpr sampler colorSampler(mip_filter::linear,
-                                   mag_filter::linear,
-                                   min_filter::linear);
-
-    half4 colorSample   = colorMap.sample(colorSampler, in.texCoord.xy);
-
-    return float4(colorSample);
+    const sampler colorSampler(mip_filter::nearest, mag_filter::nearest, min_filter::nearest);
+    float4 texture = colorTexture.sample(colorSampler, float2(in.textCoords[0], in.textCoords[1]));
+    return float4(texture.rgba);
 }

@@ -7,24 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA1B398C2BF469D400DD464C /* TextureLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B398B2BF469D400DD464C /* TextureLoader.swift */; };
+		EA1B398E2BF46EA500DD464C /* TextureLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B398D2BF46EA400DD464C /* TextureLibrary.swift */; };
+		EA1B39902BF46F4400DD464C /* Texture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B398F2BF46F4400DD464C /* Texture.swift */; };
+		EA1C74812BF2CBEC00E8A516 /* CameraConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1C74802BF2CBEC00E8A516 /* CameraConstants.swift */; };
 		EA7A49F12BEECBC8008330CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A49F02BEECBC8008330CE /* AppDelegate.swift */; };
 		EA7A49F32BEECBC8008330CE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A49F22BEECBC8008330CE /* GameViewController.swift */; };
 		EA7A49F52BEECBC8008330CE /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A49F42BEECBC8008330CE /* Renderer.swift */; };
 		EA7A49F72BEECBC8008330CE /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = EA7A49F62BEECBC8008330CE /* Shaders.metal */; };
 		EA7A49FA2BEECBCA008330CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA7A49F92BEECBCA008330CE /* Assets.xcassets */; };
 		EA7A49FD2BEECBCA008330CE /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EA7A49FC2BEECBCA008330CE /* Base */; };
+		EA7A4A062BEECE30008330CE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A4A052BEECE30008330CE /* Utils.swift */; };
+		EA7A4A092BEED4B1008330CE /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A4A082BEED4B1008330CE /* Entity.swift */; };
+		EA7A4A0B2BEED5DB008330CE /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A4A0A2BEED5DB008330CE /* GameScene.swift */; };
+		EA7A4A0E2BEED788008330CE /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A4A0D2BEED788008330CE /* Renderable.swift */; };
+		EA7A4A112BEF3671008330CE /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A4A102BEF3671008330CE /* Mesh.swift */; };
+		EA7A4A132BEF36C4008330CE /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A4A122BEF36C4008330CE /* Quad.swift */; };
+		EA7A4A152BEF3797008330CE /* SimpleVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A4A142BEF3797008330CE /* SimpleVertex.swift */; };
+		EA7A4A172BEF3DA6008330CE /* InstancePayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A4A162BEF3DA6008330CE /* InstancePayload.swift */; };
+		EA7A4A1B2BF1C991008330CE /* OrthographicCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7A4A1A2BF1C991008330CE /* OrthographicCamera.swift */; };
+		EAA217B52BFC4B460001149C /* TIleMapLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA217B42BFC4B460001149C /* TIleMapLoader.swift */; };
+		EAA217B72BFC507E0001149C /* testmap.csv in Resources */ = {isa = PBXBuildFile; fileRef = EAA217B62BFC507E0001149C /* testmap.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA1B398B2BF469D400DD464C /* TextureLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureLoader.swift; sourceTree = "<group>"; };
+		EA1B398D2BF46EA400DD464C /* TextureLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureLibrary.swift; sourceTree = "<group>"; };
+		EA1B398F2BF46F4400DD464C /* Texture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texture.swift; sourceTree = "<group>"; };
+		EA1C74802BF2CBEC00E8A516 /* CameraConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraConstants.swift; sourceTree = "<group>"; };
 		EA7A49ED2BEECBC8008330CE /* InstancedRendering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstancedRendering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7A49F02BEECBC8008330CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA7A49F22BEECBC8008330CE /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		EA7A49F42BEECBC8008330CE /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		EA7A49F62BEECBC8008330CE /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
-		EA7A49F82BEECBC8008330CE /* ShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
 		EA7A49F92BEECBCA008330CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA7A49FC2BEECBCA008330CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA7A49FE2BEECBCA008330CE /* InstancedRendering.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InstancedRendering.entitlements; sourceTree = "<group>"; };
+		EA7A4A052BEECE30008330CE /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		EA7A4A082BEED4B1008330CE /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		EA7A4A0A2BEED5DB008330CE /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		EA7A4A0D2BEED788008330CE /* Renderable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
+		EA7A4A102BEF3671008330CE /* Mesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mesh.swift; sourceTree = "<group>"; };
+		EA7A4A122BEF36C4008330CE /* Quad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quad.swift; sourceTree = "<group>"; };
+		EA7A4A142BEF3797008330CE /* SimpleVertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleVertex.swift; sourceTree = "<group>"; };
+		EA7A4A162BEF3DA6008330CE /* InstancePayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstancePayload.swift; sourceTree = "<group>"; };
+		EA7A4A1A2BF1C991008330CE /* OrthographicCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrthographicCamera.swift; sourceTree = "<group>"; };
+		EAA217B42BFC4B460001149C /* TIleMapLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIleMapLoader.swift; sourceTree = "<group>"; };
+		EAA217B62BFC507E0001149C /* testmap.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testmap.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,16 +86,54 @@
 		EA7A49EF2BEECBC8008330CE /* InstancedRendering */ = {
 			isa = PBXGroup;
 			children = (
+				EA7A4A0F2BEF3661008330CE /* Utilities */,
+				EA7A4A0C2BEED637008330CE /* Types */,
+				EA7A4A072BEED4A9008330CE /* Models */,
 				EA7A49F02BEECBC8008330CE /* AppDelegate.swift */,
 				EA7A49F22BEECBC8008330CE /* GameViewController.swift */,
 				EA7A49F42BEECBC8008330CE /* Renderer.swift */,
 				EA7A49F62BEECBC8008330CE /* Shaders.metal */,
-				EA7A49F82BEECBC8008330CE /* ShaderTypes.h */,
 				EA7A49F92BEECBCA008330CE /* Assets.xcassets */,
 				EA7A49FB2BEECBCA008330CE /* Main.storyboard */,
 				EA7A49FE2BEECBCA008330CE /* InstancedRendering.entitlements */,
+				EA7A4A052BEECE30008330CE /* Utils.swift */,
+				EA7A4A0A2BEED5DB008330CE /* GameScene.swift */,
+				EAA217B62BFC507E0001149C /* testmap.csv */,
 			);
 			path = InstancedRendering;
+			sourceTree = "<group>";
+		};
+		EA7A4A072BEED4A9008330CE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA7A4A082BEED4B1008330CE /* Entity.swift */,
+				EA7A4A1A2BF1C991008330CE /* OrthographicCamera.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EA7A4A0C2BEED637008330CE /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				EA7A4A0D2BEED788008330CE /* Renderable.swift */,
+				EA7A4A142BEF3797008330CE /* SimpleVertex.swift */,
+				EA7A4A162BEF3DA6008330CE /* InstancePayload.swift */,
+				EA1C74802BF2CBEC00E8A516 /* CameraConstants.swift */,
+				EA1B398F2BF46F4400DD464C /* Texture.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		EA7A4A0F2BEF3661008330CE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EA7A4A102BEF3671008330CE /* Mesh.swift */,
+				EA7A4A122BEF36C4008330CE /* Quad.swift */,
+				EA1B398B2BF469D400DD464C /* TextureLoader.swift */,
+				EA1B398D2BF46EA400DD464C /* TextureLibrary.swift */,
+				EAA217B42BFC4B460001149C /* TIleMapLoader.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +196,7 @@
 			files = (
 				EA7A49FA2BEECBCA008330CE /* Assets.xcassets in Resources */,
 				EA7A49FD2BEECBCA008330CE /* Base in Resources */,
+				EAA217B72BFC507E0001149C /* testmap.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,10 +207,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA1C74812BF2CBEC00E8A516 /* CameraConstants.swift in Sources */,
+				EA7A4A062BEECE30008330CE /* Utils.swift in Sources */,
+				EA7A4A152BEF3797008330CE /* SimpleVertex.swift in Sources */,
 				EA7A49F72BEECBC8008330CE /* Shaders.metal in Sources */,
+				EA7A4A172BEF3DA6008330CE /* InstancePayload.swift in Sources */,
+				EA7A4A1B2BF1C991008330CE /* OrthographicCamera.swift in Sources */,
+				EA1B398C2BF469D400DD464C /* TextureLoader.swift in Sources */,
+				EA1B39902BF46F4400DD464C /* Texture.swift in Sources */,
+				EA7A4A132BEF36C4008330CE /* Quad.swift in Sources */,
+				EA7A4A092BEED4B1008330CE /* Entity.swift in Sources */,
 				EA7A49F32BEECBC8008330CE /* GameViewController.swift in Sources */,
 				EA7A49F52BEECBC8008330CE /* Renderer.swift in Sources */,
+				EA1B398E2BF46EA500DD464C /* TextureLibrary.swift in Sources */,
+				EA7A4A0B2BEED5DB008330CE /* GameScene.swift in Sources */,
+				EAA217B52BFC4B460001149C /* TIleMapLoader.swift in Sources */,
+				EA7A4A112BEF3671008330CE /* Mesh.swift in Sources */,
 				EA7A49F12BEECBC8008330CE /* AppDelegate.swift in Sources */,
+				EA7A4A0E2BEED788008330CE /* Renderable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +369,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5WR52D9YHX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -299,7 +382,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.enigmaticbits.InstancedRendering;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(TARGET_NAME)/ShaderTypes.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -313,6 +396,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5WR52D9YHX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -325,7 +409,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.enigmaticbits.InstancedRendering;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(TARGET_NAME)/ShaderTypes.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
